@@ -1,0 +1,126 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  height: 100vh;
+  background-color: #fff;
+}
+
+/* Container utama dua kolom */
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+/* Kiri - gambar */
+.left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+}
+
+.left img {
+  max-width: 80%;
+  height: auto;
+}
+
+/* Kanan - form */
+.right {
+  flex: 1;
+  background-color: #50b38f;
+  color: white;
+  padding: 60px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Judul */
+.right h1 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  font-weight: 700;
+}
+
+/* Label form */
+.right label {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+/* Input form */
+.right input {
+  width: 100%;
+  padding: 15px 20px;
+  border-radius: 12px;
+  border: none;
+  margin-bottom: 25px;
+  font-size: 1rem;
+}
+
+/* Container tombol, 2 tombol berdampingan */
+.buttons {
+  display: flex;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+/* Tombol utama */
+.btn {
+  flex: 1;
+  padding: 15px 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 12px;
+  cursor: pointer;
+  border: 2px solid white;
+  background-color: transparent;
+  color: white;
+  transition: all 0.3s ease;
+  text-align: center;
+  user-select: none;
+}
+
+/* Efek hover tombol */
+.btn:hover {
+  background-color: white;
+  color: #50b38f;
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive: kolom jadi stack saat layar sempit */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .left, .right {
+    flex: none;
+    width: 100%;
+    height: auto;
+    padding: 40px 20px;
+  }
+
+  .left img {
+    max-width: 60%;
+    margin: 0 auto;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+    flex: none;
+  }
+}

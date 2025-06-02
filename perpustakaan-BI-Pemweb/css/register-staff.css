@@ -1,0 +1,93 @@
+/* Reset dasar */
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  height: 100vh;
+  background-color: #fff;
+}
+
+/* Container utama dua kolom */
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+/* Kiri - gambar */
+.left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+}
+
+.left img {
+  max-width: 80%;
+  height: auto;
+}
+
+/* Kanan - form */
+.right {
+  flex: 1;
+  background-color: #50b38f;
+  color: white;
+  padding: 60px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.right h1 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  font-weight: 700;
+}
+
+/* Label form */
+.right label {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+/* Input form */
+.right input {
+  width: 100%;
+  padding: 15px 20px;
+  border-radius: 12px;
+  border: none;
+  margin-bottom: 25px;
+  font-size: 1rem;
+}
+
+/* Tombol */
+.buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.btn {
+  flex: 1;
+  padding: 15px 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 12px;
+  cursor: pointer;
+  border: 2px solid white;
+  background-color: transparent;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+/* Hover tombol */
+.btn:hover {
+  background-color: white;
+  color: #50b38f;
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}

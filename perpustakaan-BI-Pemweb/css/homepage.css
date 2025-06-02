@@ -1,0 +1,202 @@
+/* Reset dan font */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #fff;
+  color: #1f2a1f;
+  height: 100vh;
+}
+
+.dashboard {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background-color: #2e4732;
+  color: #d8e4d8;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 20px 20px 30px 20px;
+  border-radius: 0 !important; /* hilangkan radius */
+  height: 100vh;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+}
+
+.logo span {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+/* Menu navigasi */
+.menu a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #d8e4d8;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 6px 15px;
+  border-radius: 50px 0 0 50px;
+  margin-bottom: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.menu a:hover,
+.menu a.active {
+  background-color: #4f7d58;
+  color: #fff;
+}
+
+/* Logout di bawah */
+.logout {
+  margin-top: auto;
+}
+
+.logout a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #d8e4d8;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 6px 15px;
+  border-radius: 50px 0 0 50px;
+  margin-bottom: 0;
+  margin-top: 400px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.logout a:hover {
+  background-color: #4f7d58;
+  color: #fff;
+}
+
+/* Icon gambar di menu dan logout */
+.menu a img.menu-icon,
+.logout a img.menu-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+/* Main content */
+.main-content {
+  flex-grow: 1;
+  background-color: #fff;
+  padding: 40px 30px; /* padding kiri kanan dikurangi agar lebih lebar */
+  overflow-y: auto;
+}
+
+/* Header */
+header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+header p {
+  font-weight: 400;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+/* Welcome banner */
+.welcome-banner {
+  background-color: #4f7d58;
+  color: #fff;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 40px;
+  margin-bottom: 40px;
+}
+
+.welcome-text h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.welcome-text p {
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.welcome-image img {
+  width: 150px;
+  height: auto;
+}
+
+/* Cards layout - memenuhi lebar main-content */
+.cards {
+  width: 100%;  /* memenuhi lebar area main-content */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 kolom */
+  gap: 30px 40px;
+}
+
+/* Card style */
+.card {
+  background-color: #4f7d58;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  cursor: pointer;
+  padding: 45px 40px;
+  color: #fff;
+  font-size: 1.6rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  /* min-width dihapus supaya fleksibel */
+}
+
+.card:hover {
+  background-color: #3e6643;
+}
+
+/* Icon di card */
+.card .icon {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card .icon img.menu-icon {
+  width: 40px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Text di card */
+.card .card-text {
+  font-weight: 700;
+  font-size: 1.5rem;
+}

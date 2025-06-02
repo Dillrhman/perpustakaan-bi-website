@@ -1,0 +1,69 @@
+/* Body: Latar belakang gambar */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-image: url('pilih-role.jpg'); /* Pastikan path benar */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* Kotak utama */
+.container {
+  background-color: rgba(230, 230, 230, 0.9); /* semi-transparan */
+  padding: 40px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Judul */
+.container h1 {
+  color: #244e3b;
+  margin-bottom: 30px;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.4;
+  width: 500px;
+}
+
+/* Tombol sebagai link */
+.btn {
+  display: block;
+  width: 200px;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+/* Warna tombol */
+.btn-staff {
+  background-color: #355c3e;
+}
+
+.btn-admin {
+  background-color: #5d8b5a;
+}
+
+.btn-anggota {
+  background-color: #6fa96a;
+}
+
+/* Hover animasi */
+.btn:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}

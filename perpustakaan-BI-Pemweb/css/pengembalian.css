@@ -1,0 +1,176 @@
+/* Reset dan dasar */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #fff;
+  color: #1f2a1f;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Dashboard container */
+.dashboard {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  align-items: flex-start;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background-color: #2e4732;
+  color: #d8e4d8;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 20px 20px 30px 20px;
+  border-radius: 0 !important;
+  height: 100vh;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.logo span {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #d8e4d8;
+}
+
+.menu a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #d8e4d8;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 6px 15px;
+  border-radius: 50px 0 0 50px;
+  margin-bottom: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.menu a:hover,
+.menu a.active {
+  background-color: #4f7d58;
+  color: #fff;
+}
+
+.menu a .icon-photo {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.logout {
+  margin-top: auto;
+}
+
+.logout a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #d8e4d8;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 6px 15px;
+  border-radius: 50px 0 0 50px;
+  margin-bottom: 0;
+  margin-top: 400px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* MAIN CONTENT & TABEL */
+
+/* Main container */
+main {
+  flex-grow: 1;
+  padding: 40px 60px;
+  overflow-y: auto;
+  background-color: #f9f9f9; /* latar belakang lembut agar kontras sidebar */
+  min-height: 100vh;
+}
+
+main h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #2e4732; /* hijau gelap */
+}
+
+main p.subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+  color: #4f7d58;
+  font-weight: 500;
+}
+
+/* Header tabel */
+.table-header {
+  background-color: #4f7d58; /* hijau cerah */
+  color: white;
+  font-weight: 700;
+  padding: 14px 20px;
+  border-radius: 10px;
+  display: flex;
+  gap: 0;
+  max-width: 650px;
+  margin-bottom: 10px;
+}
+
+.table-header > div {
+  flex: 1;
+  text-align: left;
+}
+
+/* Baris data */
+.table-row {
+  background-color: white;
+  max-width: 650px;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0;
+  padding: 12px 20px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  box-shadow: 0 1px 4px rgb(0 0 0 / 0.1);
+  color: #1f2a1f;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.table-row:hover {
+  background-color: #e6f0db; /* hijau muda saat hover */
+  cursor: default;
+}
+
+.table-row > div {
+  flex: 1;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+

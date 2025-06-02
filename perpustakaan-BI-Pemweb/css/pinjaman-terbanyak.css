@@ -1,0 +1,162 @@
+/* styles.css */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #fff;
+  color: #1f2a1f;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.menu-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  margin-right: 12px;
+}
+
+.dashboard {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  align-items: flex-start;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background-color: #2e4732;
+  color: #d8e4d8;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 20px 20px 30px 20px;
+  border-radius: 0 !important;
+  height: 100vh;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+}
+
+.logo span {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #d8e4d8;
+}
+
+/* Menu navigasi sidebar */
+.menu a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #d8e4d8;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 6px 15px;
+  border-radius: 50px 0 0 50px;
+  margin-bottom: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.menu a:hover,
+.menu a.active {
+  background-color: #4f7d58;
+  color: #fff;
+}
+
+/* Logout */
+.logout {
+  margin-top: auto;
+}
+
+.logout a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #d8e4d8;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 6px 15px;
+  border-radius: 50px 0 0 50px;
+  margin-bottom: 0;
+  margin-top: 400px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Tambahan CSS untuk konten utama */
+.content {
+  flex-grow: 1;
+  padding: 40px;
+  overflow-y: auto;
+}
+
+.content h1 {
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 5px;
+  color: #1f2a1f;
+}
+
+.content p {
+  font-size: 0.9rem;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+thead tr {
+  background-color: #326b46; /* hijau gelap */
+  color: white;
+  text-align: left;
+  font-weight: 700;
+}
+
+thead th {
+  padding: 15px 20px;
+}
+
+tbody tr {
+  border-bottom: 1px solid #ddd;
+}
+
+tbody td {
+  padding: 15px 20px;
+  color: #1f2a1f;
+}
+
+tbody tr:hover {
+  background-color: #f0f5f0;
+}
+
+/* Icon gambar di sidebar */
+.menu img.icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  margin-right: 12px;
+}

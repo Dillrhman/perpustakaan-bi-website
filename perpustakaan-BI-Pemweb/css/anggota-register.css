@@ -1,0 +1,149 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f2f5;
+}
+
+/* Container dua kolom */
+.container {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Kiri: gambar dengan efek blur */
+.left {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  filter: blur(6px);
+  transform: scale(1.05);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/* Lapisan overlay semi transparan */
+.left::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 2;
+}
+
+/* Kanan: form dengan background blur */
+.right {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px 60px;
+  position: relative;
+  z-index: 3;
+}
+
+/* Form judul */
+.right h1 {
+  font-size: 2.8rem;
+  margin-bottom: 40px;
+  color: #2e5732;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* Label */
+.right label {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 8px;
+  color: #1f2a1f;
+  font-weight: 600;
+}
+
+/* Input */
+.right input[type="text"],
+.right input[type="password"],
+.right input[type="email"] {
+  width: 100%;
+  padding: 15px 20px;
+  border-radius: 12px;
+  border: 1.5px solid #ccc;
+  margin-bottom: 25px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  font-family: inherit;
+}
+
+.right input[type="text"]:focus,
+.right input[type="password"]:focus,
+.right input[type="email"]:focus {
+  outline: none;
+  border-color: #2e5732;
+  box-shadow: 0 0 8px rgba(46, 87, 50, 0.5);
+}
+
+/* Tombol submit */
+.btn {
+  width: calc(100% + 40px);
+  margin-left: -20px;
+  margin-right: -20px;
+  padding: 10px 0;          /* kurangin padding vertikal */
+  line-height: 1.2;         /* jaga teks tetap center */
+  background-color: #2e5732;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #1f3a21;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .left, .right {
+    flex: none;
+    width: 100%;
+    height: 50vh;
+  }
+
+  .left img {
+    height: 50vh;
+  }
+
+  .right {
+    padding: 30px 25px;
+    height: 50vh;
+    backdrop-filter: none;
+    background: #fff;
+  }
+}

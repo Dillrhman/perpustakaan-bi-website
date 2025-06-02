@@ -1,0 +1,190 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #fff;
+  color: #1f2a1f;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.menu-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  margin-right: 12px;
+}
+
+.dashboard {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  align-items: flex-start;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background-color: #2e4732;
+  color: #d8e4d8;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 20px 20px 30px 20px;
+  border-radius: 0 !important;
+  height: 100vh;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+}
+
+.logo span {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #d8e4d8;
+}
+
+/* Menu navigasi sidebar */
+.menu a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #d8e4d8;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 6px 15px;
+  border-radius: 50px 0 0 50px;
+  margin-bottom: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.menu a:hover,
+.menu a.active {
+  background-color: #4f7d58;
+  color: #fff;
+}
+
+/* Logout */
+.logout {
+  margin-top: auto;
+}
+
+.logout a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #d8e4d8;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 6px 15px;
+  border-radius: 50px 0 0 50px;
+  margin-bottom: 0;
+  margin-top: 400px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Konten utama di kanan */
+.content {
+  flex-grow: 1;
+  padding: 20px 40px;
+  overflow-y: auto;
+}
+
+/* Judul */
+.content h1 {
+  margin-bottom: 30px;
+  font-weight: 700;
+  font-size: 2.4rem;
+  color: #2e4732;
+}
+
+/* Menu kotak besar */
+.side-menu-boxes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+/* Set ukuran besar untuk kotak */
+.box {
+  border-radius: 12px;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+  height: 320px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
+  text-align: center;
+}
+
+/* Hover shadow untuk semua box */
+.box:hover {
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+}
+
+/* box green default dan hover */
+.box.green {
+  background-color: #4f7d58;
+  color: white;
+}
+
+.box.green:hover {
+  background-color: #6aa96a;
+  color: white;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+}
+
+/* box light-gray default */
+.box.light-gray {
+  background-color: #e8e8e8;
+  color: #4f7d58;
+}
+
+/* box light-gray hover animasi hijau muda */
+.box.light-gray:hover {
+  animation: greenLightChange 3s infinite alternate;
+  color: #1b5e20;
+  box-shadow: 0 8px 24px rgba(27, 94, 32, 0.6);
+}
+
+@keyframes greenLightChange {
+  0% { background-color: #dcedc8; }
+  33% { background-color: #aed581; }
+  66% { background-color: #7cb342; }
+  100% { background-color: #dcedc8; }
+}
+
+.box .icon {
+  margin-bottom: 18px;
+}
+
+.box .icon img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+}
+
+.box .text {
+  font-weight: 700;
+  font-size: 1.3rem;
+  line-height: 1.2;
+}
